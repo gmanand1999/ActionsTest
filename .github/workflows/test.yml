@@ -1,0 +1,23 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a simple script
+        run: echo "This is a simple script running."
+
+      - name: Notify Anand Kishore <anand.kishore@straive.com>
+        run: echo "This step contains the email address of Anand Kishore."
+
+      - name: Complete the workflow
+        run: echo "Workflow completed successfully!"
